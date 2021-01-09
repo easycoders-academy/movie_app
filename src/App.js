@@ -15,7 +15,20 @@ class App extends React.Component {
     this.setState(current => ({count: current.count - 1}));
   }
 
+  componentDidMount() {
+    console.log('Компонент отрендерился');
+  }
+
+  componentDidUpdate(){
+    console.log('Компонент обновился');
+  }
+
+  componentWillUnmount(){
+    console.log('Компонент умер :(');
+  }
+
   render() {
+    console.log('Я рендерюсь');
     return <div>
       <h1>Текущее число: {this.state.count}</h1>
       <button onClick={this.add}>Плюс</button>
