@@ -21,9 +21,9 @@
 }
 
 .movies .movie a {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 2fr;
+  grid-gap: 20px;
   text-decoration: none;
   color: inherit;
 }
